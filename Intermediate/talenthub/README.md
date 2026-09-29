@@ -1,6 +1,6 @@
 # TalentHub
 
-Aplicación web desarrollada con Angular para gestionar información de empleados, proyectos y tareas.
+Aplicación web desarrollada con Angular para gestionar información de empleados Y proyectos.
 
 El proyecto está en desarrollo y se irá ampliando con nuevas funcionalidades.
 
