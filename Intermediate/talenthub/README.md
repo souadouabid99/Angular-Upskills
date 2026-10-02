@@ -50,24 +50,44 @@ Después abre `http://localhost:4200/` en el navegador.
 ## Estructura principal
 
 ```text
-src/
-├── app/
-│   ├── features/
-│   │   ├── empleados/
-│   │   │   └── models/
-│   │   └── proyectos/
-│   │       └── models/
-│   ├── app.ts
-│   ├── app.html
-│   └── app.routes.ts
-├── main.ts
-└── styles.scss
+src/app/
+├── core/
+│   ├── guards/            
+│   ├── interceptors/      
+│   └── layout/
+│       ├── navbar/
+│       └── footer/
+├── shared/
+│   ├── components/
+│   │   ├── spinner/
+│   │   ├── avatar/
+│   │   └── badge-disponibilidad/
+│   └── validators/        
+└── features/
+    ├── empleados/
+    │   ├── models/            
+    │   ├── services/
+    │   ├── resolvers/
+    │   ├── components/
+    │   └── index.ts
+    ├── proyectos/
+    │   ├── models/            
+    │   ├── services/
+    │   ├── components/
+    │   └── index.ts
+    └── dashboard/
+        ├── components/
+        └── index.ts
 ```
 
 ### Organización
 
-- `models/`: interfaces y tipos de datos.
+- `core/`: artefactos transversales de la aplicacion que normalmente se instancian una unica vez
+- `shared/`: elementos reutilizables y genericos que puedes ser usados por distintas partes de la aplicacion
 - `features/`: funcionalidades agrupadas por dominio, como empleados o proyectos.
+- `models/`: interfaces y tipos de datos.
+- `Barrel files`: con index.ts para definir que elementos exponer publicamente de una feature.
+- `alias de importacion`: mejoración de la legibilidad de los imports.
 - `app.routes.ts`: rutas de la aplicación.
 - `styles.scss`: estilos globales.
 
